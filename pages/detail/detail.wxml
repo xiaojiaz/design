@@ -1,0 +1,24 @@
+<view class='container'>
+  <image class='images' src='/labs/A001.jpg'></image>
+  <form bindsubmit="formSubmit">
+  <view class='section'>
+      <text>实验室种类:</text>
+      <input type='number' placeholder='请输入学号' name="no" value='移动开发实验室'/>
+    </view>
+    <view class='section'>
+      <text>实验室编号:</text>
+      <input type='number' placeholder='请输入学号' name="no" value='A001'/>
+    </view>
+    <view class='section'>
+      <text>位置:</text>
+      <input placeholder='请输入密码' name="pwd" value='计算机实验中心一楼东区'/>
+    </view>
+    <view class='section'>
+      <text>可容纳人数:</text>
+      <input placeholder='请输入密码' name="pwd" value='50人'/>
+    </view>
+    <view class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>修改</button>
+    </view>
+  </form>
+</view>

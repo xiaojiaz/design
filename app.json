@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/reserve/reserve",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/display/display",
+    "pages/yuyues/yuyues",
+    "pages/fankui/fankui",
+    "pages/look_Fankui/look_Fankui",
+    "pages/myinformation/myinformation",
+    "pages/tongji_detail/tongji_detail",
+    "pages/tongji/tongji",
+    "pages/addLab/addLab",
+    "pages/manageLab/manageLab",
+    "pages/admin_check/admmin_check",
+    "pages/cancel/cancel",
+    "pages/upload/upload",
+    "pages/fpwd/fpwd",
+    "pages/detail/detail",
+    "pages/g_Detail/g_Detail",
+    "pages/book/book",
+    "pages/logs/logs",
+    "pages/yuyue/yuyue",
+    "pages/brief/brief",
+    "pages/mynews/mynews",
+    "pages/show/show",
+    "pages/register/register"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "实验室预约系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/mine/mine",
+      "text": "首页",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/home_s.png"
+    },
+    {
+      "pagePath": "pages/display/display",
+      "text": "统计",
+      "iconPath": "icon/order.png",
+      "selectedIconPath": "icon/order_s.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "管理",
+      "iconPath": "icon/order.png",
+      "selectedIconPath": "icon/order_s.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "icon/mine.png",
+      "selectedIconPath": "icon/mine_s.png"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

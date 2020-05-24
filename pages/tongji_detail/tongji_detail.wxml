@@ -1,0 +1,19 @@
+<view class='container'>
+  <image class='images' src="{{lab.imageUrl}}"></image>
+    <view class='section'>
+      <text>实验室编号:</text>
+      <input type='number'  name="no" value="{{lab.lab_No}}"/>
+    </view>
+    <view class='section'>
+      <text>位置:</text>
+      <input name="pwd" value="{{lab.lab_location}}"/>
+    </view>
+    <view class='section'>
+      <text>可容纳人数:</text>
+      <input name="pwd" value="{{lab.lab_Size}}"/>
+    </view>
+    <view class='section'>
+      <text>描述:</text>
+      <input name="pwd" value="{{lab.describe}}"/>
+    </view>
+</view>

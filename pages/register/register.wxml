@@ -1,0 +1,29 @@
+<view class='container'>
+  <image class='images' src='/icon/lab.jpg'></image>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <input name="zhanghao" type='number' placeholder='账号:'/>
+    </view>
+    <view class='section'>
+      <input name="pwd" password='true' placeholder='密码:'/>
+    </view>
+    <view class='section'>
+      <input name="pwd1" password='true' placeholder='请再次输入密码:' />
+    </view>
+    <view class='section'>
+      <input name="email" placeholder='邮箱:'/>
+    </view>
+    <view class='section'>
+      <input name="grade" placeholder='年级:'/>
+    </view>
+    <view class='section'>
+      <input name="name" placeholder='姓名:'/>
+    </view>
+    <view class='section'>
+      <input name="phone" placeholder='手机号:'/>
+    </view>
+    <view class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>注册</button>
+    </view>
+  </form>
+</view>

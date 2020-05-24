@@ -1,0 +1,3 @@
+<view>
+<textarea>{{new.news}}</textarea>
+</view>

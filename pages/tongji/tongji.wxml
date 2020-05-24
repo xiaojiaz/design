@@ -1,0 +1,12 @@
+<view class="list-view">
+           <view bindtap="yuyue" class="list-box" wx:for="{{listgoods}}" data-index="{{index}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">实验室编号:{{list.lab_No}}</text>
+                  <view class="txt">
+                       <text class="price">{{list.use}}</text>
+                      <text class="type">{{list.lab_location}}</text>
+                  </view>
+              </view>
+           </view>
+  </view>

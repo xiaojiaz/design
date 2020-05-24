@@ -1,0 +1,101 @@
+<view hidden="{{admin_Login}}" class="list-tab">
+    <ul>
+        <li class="{{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">预约排行</li>
+        <li class="{{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">收藏排行</li>
+    </ul>
+</view>
+
+<swiper hidden="{{admin_Login}}" class="swiper-box"  current="{{current}}" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" bindchange="changeSlider">
+  <block>
+
+  
+<!-- 1 -->
+    <swiper-item >
+      <scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}">
+              <view class="list-images" ><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.lab_No}}</text>
+                  <view class="txt">
+                      <text class="type">{{list.describe}}</text>
+                  </view>
+              </view>
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+<!--2  -->
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-box" wx:for="{{listgoodss}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.lab_No}}</text>
+                  <view class="txt">
+                      <text class="type">{{list.describe}}</text>
+                  </view>
+              </view>
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>
+<view hidden="{{!admin_Login}}">
+    <view class="yuyue" hidden="{{show}}">
+    <view class='section'>
+      <input bindinput="xuehao" type='number' placeholder='学号:' name="no"/>
+    </view>
+<view class="section" >  
+  <input bindinput="bianhao" placeholder='实验室编号:' name="no"/>
+</view>
+<view class="section" >  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" mode = "selector">  
+    <view class="picker">  
+      用途：{{objectArray[index]}}  
+    </view>  
+  </picker>  
+</view>
+<view class="section">  
+  <picker mode="date" value="{{date}}" start="2020-01-01" end="2021-01-01" bindchange="bindDateChange">  
+    <view class="picker">  
+      开始日期: {{datess}}  
+    </view>  
+  </picker>  
+</view>
+<view class="section">  
+  <picker mode="date" value="{{date}}" start="2020-01-01" end="2021-01-01" bindchange="bindDateChanges">  
+    <view class="picker">  
+      截止日期: {{dates}}  
+    </view>  
+  </picker>  
+</view>
+<view class='section'>
+      <input bindinput="size" type='number' placeholder='使用人数:' name="no"/>
+</view>
+<view class="section" >  
+  <picker bindchange="bindPickerChange2" value="{{index}}" range="{{objectArray2}}" mode = "selector">  
+    <view class="picker">  
+      显示类型：{{objectArray2[index]}}  
+    </view>  
+  </picker>  
+</view>
+<view class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>统计</button>
+      <button bindtap="gotoindex1" type='primary' form-type='submit'>查看</button>
+</view>
+</view>
+<view hidden="{{!show}}" class="list-view" bindtap="yuyue">
+           <view class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.pic_url}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.name}}</text>
+                  <view class="txt">
+                      <text class="type">{{list.type}}</text>
+                  </view>
+              </view>
+           </view>
+  </view>
+</view>

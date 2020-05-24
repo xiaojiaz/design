@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view hidden="{{admin_Login}}">
+<!-- 顶部轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 操作按钮 -->
+  <view class='btn-bar'>
+    <view class='btn-block' bindtap='golist'>
+      <view class="btn_op1">预约实验室</view>
+    </view>
+    <view class='btn-block' bindtap='gobrief'>
+      <view class="btn_op2">实验室简介</view>
+    </view>
+  </view>
+  <!-- 中部广告 -->
+  <view class="ad-box">
+    <image src='../../images/lab5.jpg' class="image_ad"></image>
+  </view>
+  <!-- 底部横向滑动box -->
+  <view class='bottom-box'>
+    <scroll-view scroll-x="true" class="scroll-box">
+      <view class='slide-inline-box'>
+        <image src='../../images/lab6.jpg' class='bottom-image'></image>
+      </view>
+      <view class='slide-inline-box'>
+        <image src='../../images/lab4.jpg' class='bottom-image'></image>
+      </view>
+      <view class='slide-inline-box'>
+        <image src='../../images/lab7.jpg' class='bottom-image'></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view hidden="{{!admin_Login}}" class="list-view" >
+           <view bindtap="look" data-index="{{index}}" class="list-box" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.lab_No}}</text>
+                  <view class="txt">
+                       <text class="price">{{list.p_State}}</text>
+                      <text class="type">(学号:{{list.user_No}})</text>
+                  </view>
+              </view>
+           </view>
+</view>

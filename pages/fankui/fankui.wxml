@@ -1,0 +1,7 @@
+<view class="section" >  
+  <input bindinput="jieshouren" type='number' placeholder='请输入接受人账号:'/>
+</view>
+<view>
+  <textarea bindinput="fankui" placeholder="请输入您的反馈"></textarea>
+</view>
+<button style="margin-top:100px;" bindtap="tijiao" type="primary"  form-type='submit'>提交反馈</button>

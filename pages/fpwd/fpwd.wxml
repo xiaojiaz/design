@@ -1,0 +1,26 @@
+<view class='container'>
+  <image class='images' src='/icon/lab.jpg'></image>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>帐号:</text>
+      <input type='number' placeholder='请输入学号' name="no" value=''/>
+    </view>
+    <view class='section'>
+      <text>重新输入密码:</text>
+      <input password='true' placeholder='请输入密码' name="pwd" value=''/>
+    </view>
+    <view class='section'>
+      <text>再次输入密码:</text>
+      <input password='true' placeholder='请输入密码' name="pwd1" value=''/>
+    </view>
+    <view class='section'>
+    <input type="text" id="code" name="codeImg" placeholder-class='C3' bindinput='codeImg' placeholder="请输入图形验证码" maxlength="4" value="{{imgCode}}"/>
+<view style='position:relative;' bindtap="onTap">
+<canvas style="width:160rpx;height:70rpx;position:absolute;right:0rpx;bottom:10rpx;text-align: center;z-index:9999;" canvas-id="canvas"></canvas>
+</view>
+</view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>重置密码</button>
+    </view>
+  </form>
+</view>

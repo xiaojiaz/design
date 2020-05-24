@@ -1,0 +1,11 @@
+<view class="info_list">
+    <view bindtap="lookNews" wx:for="{{userListInfo1}}" data-index="{{index}}" wx:for-item="item" wx:key="index">
+        <view class="weui_cell">
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p">来自{{item.fuser_No}}({{item.time}})</view>
+            </view>
+            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+            <view class="with_arrow"></view>
+        </view>
+    </view>
+  </view>

@@ -1,0 +1,55 @@
+.section{
+   background:#CABBC7;
+   margin:20rpx;
+   padding:20rpx
+}
+.list-view{
+  border-top: 1px solid #cccccc;
+}
+.list-box{
+  display: flex;
+  padding: 5px 10px;
+  border-bottom: 1px solid #aaaaaa;
+}
+.list-images image{
+  width: 170rpx;
+  height: 170rpx;
+}
+.list-text {
+  font-size: 14px;
+  color: #666666;
+  /* background: url(/images/icons/btn-tabs_09.png) no-repeat right center; */
+  background-size:60rpx;
+}
+.list-text .name{
+  display: block;
+  height: 100rpx;
+  width: 500rpx;
+  padding: 5px;
+}
+.list-text .txt{
+  padding: 5px;
+  color:#aaaaaa;
+
+}
+.list-text .price{
+  font-size: 18px;
+  color: red;
+}
+.swiper-box{
+  height: 100%;
+}
+.scroll-box{
+  height: 100%;
+}
+.back{
+ margin-left: 15rpx;
+  width: 20%;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  color:red;
+  position: absolute;
+  right: 0;
+}

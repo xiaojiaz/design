@@ -1,0 +1,5 @@
+/* pages/brief/brief.wxss */
+.images{
+  width: 100%;
+  height: 500rpx;
+}

@@ -1,0 +1,24 @@
+<view class='container'>
+  <image class='images' src='/icon/lab.jpg'></image>
+  <form bindsubmit="formSubmit">
+    <checkbox-group class='check'>
+      <checkbox>普通用户</checkbox>
+      <checkbox checked="true">管理员</checkbox>
+    </checkbox-group>
+    <view class='section'>
+      <text>帐号:</text>
+      <input type='number' placeholder='请输入学号' name="no" value='123456'/>
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="pwd" value='123456'/>
+    </view>
+    <view class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>登录</button>
+    </view>
+  </form>
+  <view class='bottom'>
+    <text class='forget' bindtap='findpwd'>忘记密码</text>
+    <text class='register' bindtap='zhuce'>注册</text>
+  </view>
+</view>

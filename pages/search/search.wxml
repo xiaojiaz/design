@@ -1,0 +1,35 @@
+<view hidden="{{admin_Login}}"  class="list-view">
+           <view bindtap="cancel" class="list-box"  data-index="{{index}}" wx:for="{{listgoods}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.lab_No}}</text>
+                  <view class="txt">
+                       <text class="price">{{list.p_State}}</text>
+                      <text class="type">时间:{{list.e_Time}}</text>
+                  </view>
+              </view>
+           </view>
+  </view>
+  <view hidden="{{!admin_Login}}" >
+  <view class='page_row'>
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input bindinput="labno" class="" placeholder="请输入实验室编号"/>
+      </view>
+    </view>
+    <view class='sousuo'  bindtap="gotoindex">搜索</view>
+    <view bindtap="addLab" class='sousuo'>新增</view>
+  </view>
+  <view class="list-view">
+           <view bindtap="manageLab" data-index="{{index}}" class="list-box" wx:for="{{listgoodss}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">{{list.lab_No}}[编辑实验室信息]</text>
+                  <view class="txt">
+                      <text class="type">{{list.describe}}</text>
+                  </view>
+              </view>
+           </view>
+  </view>
+  </view>

@@ -1,0 +1,27 @@
+<view class='container'>
+    <button bindtap="upload">上传图片</button>
+    <image class="images" hidden="{{imageShow}}" src="{{imageUrl}}"></image>
+    <view class='section'>
+      <text>实验室编号:</text>
+      <input bindinput="num" type='number'  name="no" value="{{lab.lab_No}}"/>
+    </view>
+    <view class='section'>
+      <text>位置:</text>
+      <input bindinput="location" name="pwd" value="{{lab.lab_location}}"/>
+    </view>
+    <view class='section'>
+      <text>可容纳人数:</text>
+      <input bindinput="size" name="pwd" value="{{lab.lab_Size}}"/>
+    </view>
+    <view class='section'>
+      <text>可用于:</text>
+      <input bindinput="use" name="pwd" value="{{lab.describe}}"/>
+    </view>
+    <view class='section'>
+      <text>描述:</text>
+      <textarea bindinput="description" value="{{lab_brief}}"></textarea>
+    </view>
+    <view class='button'>
+      <button bindtap="addLab" type='primary' form-type='submit'>新增</button>
+    </view>
+</view>

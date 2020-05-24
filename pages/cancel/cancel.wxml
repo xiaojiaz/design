@@ -1,0 +1,30 @@
+<view class='container'>
+  <image class='images' src='{{lab.imageUrl}}'></image>
+  <view class='section'>
+      <text>实验室编号:</text>
+      <input disabled="true" type='number' name="no" value="{{lab.lab_No}}"/>
+    </view>
+    <view class='section'>
+      <text>开始时间:</text>
+      <input disabled="true" name="pwd" value='{{lab.s_Time}}'/>
+    </view>
+    <view class='section'>
+      <text>截止时间:</text>
+      <input disabled="true"  name="pwd" value='{{lab.e_Time}}'/>
+    </view>
+    <view class='section'>
+      <text>备注:</text>
+      <input type='number' disabled="true"  name="no" value='{{lab.lab_reservation}}'/>
+    </view>
+    <view hidden="{{used}}" class='section'>
+      <text>评分:</text>
+      <input type='number'  name="no" value='{{lab.points}}'/>
+    </view>
+    <view hidden="{{shenhe}}" class='section'>
+      <text>评价:</text>
+      <input type='number'  name="no" value='{{lab.advice}}'/>
+    </view>
+    <view hidden="{{shenheing}}" class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>取消预约</button>
+    </view>
+</view>

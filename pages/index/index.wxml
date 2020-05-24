@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+ <!--index.wxml-->
+<view>
+  <view class="info_list">
+        <view>
+          <image class="information" src="/images/1.jpg"></image>
+        </view>
+        <view class="weui_cell" bindtap="bindViewTap" >
+            <view class="weui_cell_hd"></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p">我的资料</view>
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+        <view class="weui_cell" bindtap="bindViewTap1" >
+            <view class="weui_cell_hd"></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p">我的消息</view>
+            </view>
+            <view hidden="{{display}}" class="badge">{{num}}
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+        <view bindtap="fankui" class="weui_cell">
+            <view class="weui_cell_hd"></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p">意见反馈</view>
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+        <view class="weui_cell">
+            <view class="weui_cell_hd"></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p">敬请期待</view>
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+  </view>
+</view>
+<button style="margin-top:100px;" bindtap="gotologin" type="primary"  form-type='submit'>退出登录</button>
+ 

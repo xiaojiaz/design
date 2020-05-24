@@ -1,0 +1,6 @@
+<view class="charts"> 
+    <canvas canvas-id="columnCanvas" class="canvas" disable-scroll='true' style='width:{{code_w}}px;height:{{code_h}}px'></canvas>
+</view>
+<view>
+<text class="center">实验室使用统计表</text>
+</view>

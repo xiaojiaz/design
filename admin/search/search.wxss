@@ -1,0 +1,39 @@
+.list-view{
+  border-top: 1px solid #cccccc;
+}
+.list-box{
+  display: flex;
+  padding: 5px 10px;
+  border-bottom: 1px solid #aaaaaa;
+}
+.list-images image{
+  width: 170rpx;
+  height: 170rpx;
+}
+.list-text {
+  font-size: 14px;
+  color: #666666;
+  /* background: url(/images/icons/btn-tabs_09.png) no-repeat right center; */
+  background-size:60rpx;
+}
+.list-text .name{
+  display: block;
+  height: 100rpx;
+  width: 500rpx;
+  padding: 5px;
+}
+.list-text .txt{
+  padding: 5px;
+  color:#aaaaaa;
+
+}
+.list-text .price{
+  font-size: 18px;
+  color: red;
+}
+.swiper-box{
+  height: 100%;
+}
+.scroll-box{
+  height: 100%;
+}

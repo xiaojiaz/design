@@ -1,0 +1,32 @@
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view bindtap="addLab" class='sousuo'>修改信息</view>
+    <view class='section'>
+      <text>姓名:</text>
+      <input disabled="true" type='number' name="name" value="{{users.user_Name}}"/>
+    </view>
+    <view class='section'>
+      <text>帐号:</text>
+      <input disabled="true" type='number'  name="no" value="{{users.user_No}}"/>
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input disabled="true" password='true' name="pwd" value="{{users.user_Password}}"/>
+    </view>
+    <view class='section'>
+      <text>邮箱:</text>
+      <input disabled="{{update}}"   name="email" value="{{users.user_Email}}"/>
+    </view>
+    <view hidden="{{admin_Login}}" class='section'>
+      <text>年级:</text>
+      <input disabled="true"  value="{{users.user_Grade}}"/>
+    </view>
+    <view class='section'>
+      <text>电话号码:</text>
+      <input disabled="{{update}}"  name="phone" value="{{users.user_Phone}}"/>
+    </view>
+    <view class='button'>
+      <button bindtap="gotoindex" type='default' form-type='submit'>确定</button>
+    </view>
+  </form>
+</view>

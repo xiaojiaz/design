@@ -1,0 +1,50 @@
+<view class="yuyue" hidden="{{show}}">
+<view class='section'>
+      <input bindinput="use_reason" type='number' placeholder='请输入用途，例如“移动开发”' name="no"/>
+</view>
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2020-01-01" end="2021-01-01" bindchange="bindDateChange">  
+    <view class="picker">  
+      日期: {{dates}}  
+    </view>  
+  </picker>  
+</view>
+<view class="section">  
+  <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+    <view class="picker">  
+     开始时间 : {{times}}
+    </view>  
+  </picker>  
+</view>  
+<view class="section">  
+  <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChanges">  
+    <view class="picker">  
+     截止时间 : {{timese}}
+    </view>  
+  </picker>  
+</view>
+<view class='section'>
+      <input bindinput="get_num" type='number' placeholder='使用人数:' name="no"/>
+</view>
+<view section>
+  <textarea bindinput="get_introduction" class="detailText" 
+    placeholder="备注:">
+</textarea>
+</view>
+<view class='button'>
+      <button bindtap="gotoindex" type='primary' form-type='submit'>确定</button>
+</view>
+</view>
+<view hidden="{{!show}}" class="list-view">
+          <view bindtap="back" class="back">返回</view>
+           <view bindtap="yuyue" class="list-box" wx:for="{{listgoods}}" data-index="{{index}}" wx:for-item="list" wx:key="index">
+              <view class="list-images"><image src="{{list.imageUrl}}" /></view>
+              <view class="list-text">
+                  <text class="name">实验室编号:{{list.lab_No}}</text>
+                  <view class="txt">
+                       <text class="price">{{list.use}}</text>
+                      <text class="type">{{list.lab_location}}</text>
+                  </view>
+              </view>
+           </view>
+  </view>
